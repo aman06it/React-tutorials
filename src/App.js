@@ -1,13 +1,14 @@
 import FormComponent from './components/FormComponent';
 import logo from './logo.svg';
 import './App.css'
-import LifeCycleA from './components/LifeCycleA';
+import Table from './components/Table';
+// import FragmentDemo from './components/FragmentDemo';
 
 function App() {
   return (
     <div className="App">
-     {/* <FormComponent/> */}
-    <LifeCycleA/>
+      {/* <FragmentDemo/> */}
+      <Table/>
     </div>
   );
 }
