@@ -19,11 +19,30 @@ export default class LifeCycleA extends Component {
         console.log('LifeCycleA componentDidMount')
     }
 
+    shouldComponentUpdate(){
+        console.log('LifeCycleA shouldComponentUpdate')
+        return true
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState){
+        console.log('LifeCycleA getSnapshotBeforeUpdate')
+        return null
+    }
+
+    componentDidUpdate(){
+        console.log('LifeCycleA componentDidUpdate')
+    }
+    changeSate=()=>{
+        this.setState({
+            name:'Amit'
+        })
+    }
     render() {
         console.log('LifeCycleA render')
         return (
             <div>
-                Lifecycle A
+                <div>Lifecycle A</div>
+                <button onClick={this.changeSate}>Change State</button>
                 <LifeCycleB/>
             </div>
         )
