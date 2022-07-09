@@ -1,19 +1,15 @@
 import logo from './logo.svg';
 import './App.css'
-import ClickCounterTwo from './components/ClickCounterTwo';
-import HoverCounterTwo from './components/HoverCounterTwo';
-import User from './components/User';
-import Counter from './components/Counter';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
+
 
 function App() {
   return (
     <div className="App">
-      <Counter render={(count, increment)=>(<ClickCounterTwo count={count} incrementCounter={increment} />)} />
-      <Counter render={(count, increment)=>(<HoverCounterTwo count={count} incrementCounter={increment} />)} />
-
-      {/* <ClickCounterTwo/>
-      <HoverCounterTwo/>
-      <User render={(isLoggedIn)=>isLoggedIn?"Aman":"Guest"}/> */}
+      <UserProvider value="Aman">
+        <ComponentC/>
+      </UserProvider>
     </div>
   );
 }
