@@ -1,12 +1,15 @@
 import './App.css';
-import ClassCounterTwo from './components/ClassCounterTwo';
-import HoockCounterTwo from './components/HoockCounterTwo';
+import ClassMouse from './components/ClassMouse';
+import HoockMouse from './components/HoockMouse';
+import MouseContainer from './components/MouseContainer';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <ClassCounterTwo/> */}
-      <HoockCounterTwo/>
+      {/* <ClassMouse/> */}
+      {/* <HoockMouse/> */}
+      <MouseContainer/>
     </div>
   );
 }
