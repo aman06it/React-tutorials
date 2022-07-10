@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import CounterOne from './components/CounterOne';
+import ParentComponent from './components/ParentComponent';
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <CounterOne/>
+      <ParentComponent/>
     </div>
   );
 }
