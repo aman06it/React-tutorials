@@ -1,16 +1,17 @@
+import React from 'react';
 import './App.css';
-import ClassMouse from './components/ClassMouse';
-import HoockMouse from './components/HoockMouse';
-import IntervalClassCounter from './components/IntervalClassCounter';
-import IntervalHookCounter from './components/IntervalHookCounter';
-import MouseContainer from './components/MouseContainer';
+import ComponentC from './components/ComponentC';
 
-
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <IntervalClassCounter/>
-      <IntervalHookCounter/>
+      <UserContext.Provider value={"Aman"}>
+        <ChannelContext.Provider value={"Ola"}>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
